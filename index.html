@@ -2,36 +2,50 @@
 <html>
 <head>
 <style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+    flex-direction: column;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  
+  margin: 200px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 #section1 {
-  height: 600px;
   background-color: pink;
 }
 
 #section2 {
-  height: 600px;
+  
   background-color: yellow;
 }
+
 </style>
 </head>
 <body>
+<h1>Flexible Boxes</h1>
 
-<h1>Smooth Scroll</h1>
+<div class="flex-container">
+  <div class="main" id="section1">1<br><button onclick="window.location.href='#section2';">click</button> </div>
+  <div class="main" id="section2">2</div>
 
-<div class="main" id="section1">
-  <h2>Section 1</h2>
-  <p>Click on the link to see the "smooth" scrolling effect.</p>
-  <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
-  <p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
 </div>
 
-<div class="main" id="section2">
-  <h2>Section 2</h2>
-  <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
-</div>
+<p>Try to resize the browser window.</p>
+<p>A container with "flex-wrap: nowrap;" will never wrap its items.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
 
 </body>
 </html>
+
