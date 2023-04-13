@@ -14,4 +14,4 @@ A reference of different ways design systems define motion and kinematics for th
 - [FutureLearn](https://storybook.futurelearn.com/?path=/story/welcome--page)
 - [Acorn](https://acorn.firefox.com/latest/acorn.html)
 - [Brand Estonia](https://brand.estonia.ee/juhendid/videod-ja-animatsioonid/)
-- 
+- [Attlassian](https://atlassian.design/components/motion/variables/code)
