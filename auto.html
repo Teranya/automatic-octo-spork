@@ -104,12 +104,13 @@
                             <li class="dropdown-item navdropdown"><a class="nav-link " href="page2.html">Fleunt-Slow Out</a></li>
                             <li class="dropdown-item navdropdown"><a class="nav-link " href="page3.html">Carbon-Standard</a></li>
                             <li class="dropdown-item navdropdown"><a class="nav-link " href="page4.html">Carbon-Enterance Productive</a></li>
-                            <li class="dropdown-item navdropdown"><a class="nav-link active" aria-current="page" href="page5.html">Carbon-Enterance Expressive</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page5.html">Carbon-Enterance Expressive</a></li>
+
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li class="dropdown-item navdropdown"><a class="nav-link " href="auto.html">No Easing</a></li>
-                           
+                            <li class="dropdown-item navdropdown"><a class="nav-link active" aria-current="page" href="auto.html">No Easing</a></li>
+
                         </ul>
                     </li>
 
@@ -135,9 +136,9 @@
     <section class="py-5 px-3 header text-center  mt-0" id="top">
         <div class="container py-5">
             <header class="py-5 col-lg-6 mx-auto my-lg-5">
-                <h1 class="display-4">Enterance Easing | Expressive Motion</h1>
-                <p class="font-italic mb-1">cubic-bezier(0, 0, 0.3, 1) <br>
-                    <span class="text-muted"> Recommended by Carbon Design System to use for elements moving in response to the user’s input</span>
+                <h1 class="display-4">No Easing Defined</h1>
+                <p class="font-italic mb-1">Your browsers default scroll behaviour <br>
+                    <span class="text-muted"> Note: Some browsers like Chrome might have a Smooth Scroll flag by default if not switched off by user - varies by system</span>
                 </p>
                 <br>
                 <br>
@@ -243,14 +244,14 @@
     <script src="js/bez.js"></script>
 
     <script>
-        $('a').click(function() {
-            var top = $('body').find($(this).attr('href')).offset().top - 150;
-            $('html, body').animate({
-                scrollTop: top
-            }, 100, $.bez([0, 0, 0.3, 1]));
-
-            return false;
-        });
+        //        $('a').click(function() {
+        // var top = $('body').find($(this).attr('href')).offset().top - 150;
+        // $('html, body').animate({
+        // scrollTop: top
+        // }, 100, $.bez([0, 0, 0.3, 1]));
+        //
+        // return false;
+        // });
 
     </script>
 </body>
