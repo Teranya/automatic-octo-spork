@@ -61,6 +61,8 @@
         color: rgb(37 99 235);
     }
 
+
+
     #myBtn {
         display: none;
         /* Hidden by default */
@@ -73,6 +75,7 @@
         z-index: 99;
         /* Make sure it does not overlap */
     }
+
 
     .footer {
         background-color: rgb(238 242 255);
@@ -96,13 +99,14 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Easing Scroll Demos
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li class="dropdown-item navdropdown"><a class="nav-link   active" aria-current="page" href="page1.html">Fluent-Slow In</a></li>
-                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page2.html">Fleunt-Slow Out</a></li>
-                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page3.html">Carbon-Standard Productive</a></li>
-                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page6.html">Carbon-Standard Expressive</a></li>
-                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page4.html">Carbon-Enterance Productive</a></li>
-                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page5.html">Carbon-Enterance Expressive</a></li>
+                        <ul class="dropdown-menu navdropdown" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item navdropdown"><a class="nav-link " href="page1.html">Fluent-Slow In</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link " href="page2.html">Fleunt-Slow Out</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link " href="page3.html">Carbon-Standard</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link active" aria-current="page" href="page6.html">Carbon-Standard Expressive</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link " href="page4.html">Carbon-Enterance Productive</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link " href="page5.html">Carbon-Enterance Expressive</a></li>
+
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -126,22 +130,17 @@
 
     <!-- Header-->
 
-    <!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
-    <div class="col-md-7 p-lg-7 mx-auto my-5">
-      <h1 class="display-4 fw-normal">Slow In Fast Out: <br>cubic-bezier(1 , 0 , 1 , 1)</h1>
-      <p class="lead fw-normal">Use for UI or objects that are exiting the scene.</p>
 
-    </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-  </div> -->
+
 
 
     <section class="py-5 px-3 header text-center  mt-0" id="top">
         <div class="container py-5">
-            <header class="py-5 col-lg-9 mx-auto my-lg-5">
-                <h1 class="display-4">Slow In Fast Out</h1>
-                <p class="font-italic mb-1">Cubic-bezier(1 , 0 , 1 , 1) </p>
+            <header class="py-5 col-lg-6 mx-auto my-lg-5">
+                <h1 class="display-4">Exit Easing | Expressive Motion</h1>
+                <p class="font-italic mb-1">cubic-bezier(0.4, 0.14, 1, 1) <br>
+                    <span class="text-muted"> Exit easing exists, but if an element leaves the view but stays nearby, ready to reappear upon user action, its recommended to use standard easing instead</span>
+                </p>
                 <br>
                 <br>
                 <a class="btn  btnblu" href="#section1">Start</a>
@@ -204,7 +203,7 @@
                 <div class="card text-center mx-auto bg-transparent mb-3 mb2 " id="section5" style="max-width: 568px;">
                     <div class="card-body">
                         <label for="exampleFormControlInput1" class="card-title form-label">Input 5</label>
-                        <input type="email" class="card-text form-control mb-3" id="exampleFormControlInput1" placeholder="name@example.com"></input>
+                        <input type="email" class="card-text form-control mb-3" id="exampleFormControlInput1" placeholder="name@example.com">
                         <a href="#section6" class="btn btndrkblu">Next</a>
 
                     </div>
@@ -226,10 +225,6 @@
         </div>
     </section>
 
-    <!--Back to Top-->
-    <button onclick="topFunction()" id="myBtn" class="btn  btnblu" title="Go to top">Top</button>
-
-
 
     <!-- Footer-->
     <footer class="py-5 footer">
@@ -237,7 +232,6 @@
             <p class="m-0 text-center ">Anim Test by Tanvi 2023</p>
         </div>
     </footer>
-
 
 
     <!-- Bootstrap core JS-->
@@ -255,37 +249,12 @@
             var top = $('body').find($(this).attr('href')).offset().top - 150;
             $('html, body').animate({
                 scrollTop: top
-            }, 200, $.bez([1, 0, 1, 1]));
+            }, 100, $.bez([0.2, 0, 1, 0.9]));
 
             return false;
         });
 
-
-
-        // Get the button:
-        let mybutton = document.getElementById("myBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-
     </script>
-
 </body>
 
 </html>
