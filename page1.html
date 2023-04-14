@@ -31,7 +31,8 @@
         font-size: .875rem;
     }
 
-    .navbar {
+    .navbar,
+    .navdropdown {
         background-color: rgb(238 242 255);
     }
 
@@ -84,21 +85,45 @@
 
 <body>
     <!-- Responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light  sticky-md-top">
+    <nav class="navbar navbar-expand-lg sticky-md-top">
         <div class="container px-lg-5">
-            <a class="navbar-brand" href="#!">Anim Test on Bootstrap</a>
+            <a class="navbar-brand" href="index.html">Anim Test on Bootstrap</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item"><a class="nav-link " href="index.html">.txt</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="page1.html">Fleunt-Fast Out</a></li>
-                    <li class="nav-item"><a class="nav-link " href="page2.html">Fleunt-Slow Out</a></li>
-                    <li class="nav-item"><a class="nav-link " href="page3.html">Carbon-Standard</a></li>
-                    <li class="nav-item"><a class="nav-link " href="page3.html">Carbon-Enterance</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Easing Scroll Demos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item navdropdown"><a class="nav-link   active" aria-current="page" href="page1.html">Fluent-Slow In</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page2.html">Fleunt-Slow Out</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page3.html">Carbon-Standard</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page4.html">Carbon-Enterance Productive</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page5.html">Carbon-Enterance Expressive</a></li>
+                            <!--
+                            <li>
+<hr class="dropdown-divider">
+</li>
+<li><a class="dropdown-item" href="#">Something else here</a></li>
+-->
+                        </ul>
+                    </li>
+
+
+                    <!--
+                    <li class="nav-item"><a class="nav-link " href="page1.html">Fluent-Slow In</a></li><li class="nav-item"><a class="nav-link " href="page2.html">Fleunt-Slow Out</a></li>
+<li class="nav-item"><a class="nav-link " href="page3.html">Carbon-Standard</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="page4.html">Carbon-Enterance</a></li>
+-->
                 </ul>
             </div>
         </div>
     </nav>
+
+
+
     <!-- Header-->
 
     <!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
@@ -200,6 +225,8 @@
 
         </div>
     </section>
+
+    <!--Back to Top-->
     <button onclick="topFunction()" id="myBtn" class="btn  btnblu" title="Go to top">Top</button>
 
 
@@ -228,7 +255,7 @@
             var top = $('body').find($(this).attr('href')).offset().top - 150;
             $('html, body').animate({
                 scrollTop: top
-            }, 500, $.bez([1, 0, 1, 1]));
+            }, 200, $.bez([1, 0, 1, 1]));
 
             return false;
         });

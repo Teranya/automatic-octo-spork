@@ -52,7 +52,8 @@
         color: rgb(30 58 138);
     }
 
-    .navbar {
+    .navbar,
+    .navdropdown {
         background-color: rgb(238 242 255);
     }
 
@@ -69,7 +70,7 @@
     html {
         scroll-behavior: smooth;
         scroll-behavior: auto;
-        scroll-padding: 20em;
+        /*        scroll-padding: 20em;*/
         /* scroll-behavior: linear(1, -0.5, 0); */
     }
 
@@ -88,14 +89,25 @@
         color: rgb(37 99 235);
     }
 
-    /* section:first-of-type {
-      background: linear-gradient(to right, #5d4157, #a8caba);
-  } */
 
 
     section:not(:first-of-type) {
         min-height: 50vh;
         border-top: none;
+    }
+
+
+    #myBtn {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Fixed/sticky position */
+        bottom: 20px;
+        /* Place the button at the bottom of the page */
+        right: 30px;
+        /* Place the button 30px from the right */
+        z-index: 99;
+        /* Make sure it does not overlap */
     }
 
     .footer {
@@ -108,22 +120,50 @@
 </style>
 
 <body>
+
+
+
+
+
+
     <!-- Responsive navbar-->
-
-
-
-
-    <nav class="navbar navbar-expand-lg navbar-light sticky-md-top">
+    <nav class="navbar navbar-expand-lg sticky-md-top">
         <div class="container px-lg-5">
-            <a class="navbar-brand" href="#!">Anim Test on Bootstrap</a>
+            <a class="navbar-brand" href="index.html">Anim Test on Bootstrap</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">.txt</a></li>
-                    <li class="nav-item"><a class="nav-link " href="page1.html">Fluent - Slow In</a></li>
-                    <li class="nav-item"><a class="nav-link " href="page2.html">Fleunt - Slow Out</a></li>
-                    <li class="nav-item"><a class="nav-link" href="page3.html">Carbon-Standard</a></li>
-                    <li class="nav-item"><a class="nav-link" href="page3.html">Carbon-Enterance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#one">Easing in UI |</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#two">Fluent |</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#three">Lightning |</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#four">Carbon |</a></li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Easing Scroll Demos
+                        </a>
+                        <ul class="dropdown-menu navdropdown" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page1.html">Fluent-Slow In</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page2.html">Fleunt-Slow Out</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page3.html">Carbon-Standard</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page4.html">Carbon-Enterance Productive</a></li>
+                            <li class="dropdown-item navdropdown"><a class="nav-link" href="page5.html">Carbon-Enterance Expressive</a></li>
+                            <!--
+                            <li>
+<hr class="dropdown-divider">
+</li>
+<li><a class="dropdown-item" href="#">Something else here</a></li>
+-->
+                        </ul>
+                    </li>
+
+
+                    <!--
+                    <li class="nav-item"><a class="nav-link " href="page1.html">Fluent-Slow In</a></li><li class="nav-item"><a class="nav-link " href="page2.html">Fleunt-Slow Out</a></li>
+<li class="nav-item"><a class="nav-link " href="page3.html">Carbon-Standard</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="page4.html">Carbon-Enterance</a></li>
+-->
                 </ul>
             </div>
         </div>
@@ -131,150 +171,150 @@
 
 
 
+    <!--    CONTENT-->
 
 
-    <!-- Header-->
-    <!-- <header class="py-5" id="top">
-    <div class="container px-lg-5">
-      <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
-        <div class="m-4 m-lg-5">
-          <h2 class="fw-bold pb-3">Smooth scroll animations</h2>
 
-        </div>
-      </div>
-    </div>
-  </header> -->
 
 
     <section class="py-5 px-3 header text-center  mt-0" id="hero">
         <div class="container py-5">
             <header class="py-5 col-lg-9 mx-auto my-lg-5">
                 <h1 class="display-4">Motion in Design</h1>
-                <p class="font-italic mb-1">A collection of timing and easing guidelines from various Design Systems </p>
+                <p class="font-italic mb-1">A collection of timing and easing guidelines from various Design Systems </p><br>
                 <p class="font-italic">Collected by tnvi</p>
 
 
-                <!-- <div class="list-group">
-          <button type="button" class="list-group-item lst bg-transparent list-group-item-action">
-            The current button
-          </button>
-          <button type="button" class="list-group-item lst bg-transparent list-group-item-action">Easing in UI</button>
-          <button type="button" class="list-group-item lst bg-transparent list-group-item-action">Fluent UI</button>
-          <button type="button" class="list-group-item lst bg-transparent list-group-item-action">Lightning UI</button>
-          <button type="button" class="list-group-item lst bg-transparent list-group-item-action">A disabled button item</button>
-        </div> -->
 
-                <div class="container pt-3">
-                    <div class="row">
-                        <div class="col">
-                            <a href="#one" class="list-group-item lst btn">Easing in UI</a>
-                        </div>
-                        <div class="col">
-                            <a href="#two" class="list-group-item lst btn">Fluent UI</a>
-                        </div>
-                        <div class="col">
-                            <a href="#three" class="list-group-item lst btn">Lightning UI</a>
+                <!--
+                <div class="container g-2 pt-3">
+<div class="row  g-2">
+    <div class="col">
+        <a href="#one" class="list-group-item lst btn">Easing in UI</a>
+    </div>
+    <div class="col">
+        <a href="#two" class="list-group-item lst btn">Fluent UI</a>
+    </div>
 
-                        </div>
-                    </div>
-                </div>
+</div>
+<div class="row g-2">
+    <div class="col">
+        <a href="#three" class="list-group-item lst btn">Lightning UI</a>
+
+    </div>
+    <div class="col">
+        <a href="#four" class="list-group-item lst btn">Carbon UI</a>
+
+    </div>
+</div>
+</div>
+-->
+
+
             </header>
         </div>
     </section>
 
-    <!--  section 1 -->
 
-    <section class="py-5 px-3 d-flex align-items-center" id="one">
-        <div class="container py-5">
-            <div class="row text-left">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="h1 mb-4">Easing in UI </h2>
-                    <p class="font-italic mb-4 ">Easing is a way to control the velocity of an object as it travels, it helps make animations and movement feel more natural.<br> Strictly linear movement tends to appear unnatural to the human eye. Ideally, elements should accelarate fast and deaccelarate smoothly.</p>
+    <!--main-->
+    <section class="col-xs-9 mx-auto">
 
-                    <!-- Scroll to top -->
-                    <a class="btn btn-outline-light px-4 rounded-0 scroll-top" href="#">Back to top</a>
+
+        <!--  section 1 -->
+
+        <section class="py-5 px-3 d-flex align-items-center" id="one">
+            <div class="container py-5">
+                <div class="row text-left">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="h1 mb-4">Easing in UI </h2>
+                        <p class="font-italic mb-4 ">Easing is a way to control the velocity of an object as it travels, it helps make animations and movement feel more natural.<br> Strictly linear movement tends to appear unnatural to the human eye. Ideally, elements should accelarate fast and deaccelarate smoothly.</p>
+
+                        <!-- Scroll to top -->
+                        <a class="btn btn-outline-light px-4 rounded-0 scroll-top" href="#">Back to top</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--  section 2 -->
+        <!--  section 2 -->
 
-    <section class="py-5 px-3 d-flex align-items-center" id="two">
-        <div class="container py-5">
-            <div class="row text-left">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="h1 mb-4">Microsoft Fluent Design System </h2>
-                    <h6 class=""> <a href="https://learn.microsoft.com/en-us/windows/apps/design/motion/">Motion for Windows Apps <i class="bi bi-box-arrow-up-right"></i></a></h6>
-                    <p class="font-italic mb-4 text-muted">In regards to easing, Fluent has two major methods of easing applied to various applications </p>
-                    <p class="font-bold mb-4 "> Fast Out, Slow In <br><span class="code text-muted">cubic-bezier(0, 0, 0, 1)</span><br><span class="text-muted">Used for objects or UI entering the scene, either navigating or spawning. Despite the moment of
-                            apparent unresponsiveness, the overall velocity of the incoming object
-                            gives the effect of feeling fast and responsive. <a class="bodylink" href="https://cubic-bezier.com/#0,0,0,1">Link to view easing <i class="bi bi-link-45deg"></i></a></span></p>
+        <section class="py-5 px-3 d-flex align-items-center" id="two">
+            <div class="container py-5">
+                <div class="row text-left">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="h1 mb-4">Microsoft Fluent Design System </h2>
+                        <h6 class=""> <a href="https://learn.microsoft.com/en-us/windows/apps/design/motion/">Motion for Windows Apps <i class="bi bi-box-arrow-up-right"></i></a></h6>
+                        <p class="font-italic mb-4 text-muted">In regards to easing, Fluent has two major methods of easing applied to various applications </p>
+                        <p class="font-bold mb-4 "> Fast Out, Slow In <br><span class="code text-muted">cubic-bezier(0, 0, 0, 1)</span><br><span class="text-muted">Used for objects or UI entering the scene, either navigating or spawning. Despite the moment of
+                                apparent unresponsiveness, the overall velocity of the incoming object
+                                gives the effect of feeling fast and responsive. <a class="bodylink" href="https://cubic-bezier.com/#0,0,0,1">Link to view easing <i class="bi bi-link-45deg"></i></a></span></p>
 
-                    <p class="font-bold mb-4 "> Slow Out, Fast In <br><span class="code text-muted">cubic-bezier(1 , 0 , 1 , 1)</span><br><span class="text-muted">Used for objects or UI exiting the scene. With objects gaining momentum until they reach escape
-                            velocity, viewers are left feeling like the object is trying its best
-                            to get out of the way as fast as it can and making room for new objects. <a class="bodylink" href="https://cubic-bezier.com/#1,0,1,1">Link to view easing <i class=" bi bi-link-45deg"></i></a></span></p>
-                    <!-- Scroll to top -->
-                    <a class="btn btn-outline-light px-4 rounded-0 scroll-top" href="#">Back to top</a>
+                        <p class="font-bold mb-4 "> Slow Out, Fast In <br><span class="code text-muted">cubic-bezier(1 , 0 , 1 , 1)</span><br><span class="text-muted">Used for objects or UI exiting the scene. With objects gaining momentum until they reach escape
+                                velocity, viewers are left feeling like the object is trying its best
+                                to get out of the way as fast as it can and making room for new objects. <a class="bodylink" href="https://cubic-bezier.com/#1,0,1,1">Link to view easing <i class=" bi bi-link-45deg"></i></a></span></p>
+                        <!-- Scroll to top -->
+                        <a class="btn btn-outline-light px-4 rounded-0 scroll-top" href="#">Back to top</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!--  section 3 -->
+        <!--  section 3 -->
 
-    <section class="py-5 px-3 d-flex align-items-center" id="three">
-        <div class="container py-5">
-            <div class="row text-left">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="h1 mb-4">Salesforce Lightening Design System </h2>
-                    <h6 class=""> <a href="https://www.lightningdesignsystem.com/kinetics/choreography/kinetics-and-interaction/">Kinetics & Interaction <i class="bi bi-box-arrow-up-right"></i></a></h6>
-                    <p class="font-italic mb-4 text-muted">Lightning also uses two buckets of Easing</p>
-                    <p class="font-bold mb-4 "> Ease Out<br><span class="text-muted">Used as a reactive motion, triggered by user interaction. This makes the overall motion feel faster, the click or tap interaction triggering the motion acts as the ease in. <br><a class="bodylink" href="https://cubic-bezier.com/#.42,0,1,1">Link to view easing (set duration to 0.5s) <i class="bi bi-link-45deg"></i></a></span></p>
+        <section class="py-5 px-3 d-flex align-items-center" id="three">
+            <div class="container py-5">
+                <div class="row text-left">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="h1 mb-4">Salesforce Lightening Design System </h2>
+                        <h6 class=""> <a href="https://www.lightningdesignsystem.com/kinetics/choreography/kinetics-and-interaction/">Kinetics &#38; Interaction <i class="bi bi-box-arrow-up-right"></i></a></h6>
+                        <p class="font-italic mb-4 text-muted">Lightning also uses two buckets of Easing</p>
+                        <p class="font-bold mb-4 "> Ease Out<br><span class="text-muted">Used as a reactive motion, triggered by user interaction. This makes the overall motion feel faster, the click or tap interaction triggering the motion acts as the ease in. <br><a class="bodylink" href="https://cubic-bezier.com/#.42,0,1,1">Link to view easing (set duration to 0.5s) <i class="bi bi-link-45deg"></i></a></span></p>
 
-                    <p class="font-bold mb-4 "> Ease In and Out <br><span class="text-muted">Used as a proactive motion, triggered by system events. This easing has elements pop in, exist, and the fade out. These need to be used in a manner so as to not
-                            overwhelm the user, avoid showing too many at a time and look for opportune moments to use it (preferably not in the middle of a task). <br><a class="bodylink" href="https://cubic-bezier.com/#.42,0,.58,1">Link to view easing (set duration to 0.5s)<i class=" bi bi-link-45deg"></i></a></span></p>
-                    <!-- Scroll to top -->
-                    <a class="btn btn-outline-light px-4 rounded-0 scroll-top" href="#">Back to top</a>
+                        <p class="font-bold mb-4 "> Ease In and Out <br><span class="text-muted">Used as a proactive motion, triggered by system events. This easing has elements pop in, exist, and the fade out. These need to be used in a manner so as to not
+                                overwhelm the user, avoid showing too many at a time and look for opportune moments to use it (preferably not in the middle of a task). <br><a class="bodylink" href="https://cubic-bezier.com/#.42,0,.58,1">Link to view easing (set duration to 0.5s)<i class=" bi bi-link-45deg"></i></a></span></p>
+                        <!-- Scroll to top -->
+                        <a class="btn btn-outline-light px-4 rounded-0 scroll-top" href="#">Back to top</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!--  section 4 -->
+        <!--  section 4 -->
 
-    <section class="py-5 px-3 d-flex align-items-center" id="four">
-        <div class="container py-5">
-            <div class="row text-left">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="h1 mb-4">Carbon Design System </h2>
-                    <h6 class=""> <a href="https://carbondesignsystem.com/guidelines/motion/overview/#easing">Carbon in motion<i class="bi bi-box-arrow-up-right"></i></a></h6>
-                    <p class="mb-4 text-muted">Carbon defines their two two buckets of motion as productive and expressive motion, within which you have three variations of easing: standard easing, enterance easing, exit easing. </p>
-
-
-                    <p class="mb-4 text-muted"><i>Expressive motion</i> is applied in the case of significant moments such as opening a new page, clicking the primary action button, or when the movement itself conveys a meaning. System alerts and notificaiton boxes coming into view are good spots to use expressive motion</p>
-                    <p class="mb-4 text-muted"><i>Productive motion</i> is generally used for microinteractions, it creates a sense of efficiency and responsiveness while remaining subtle.</p>
+        <section class="py-5 px-3 d-flex align-items-center" id="four">
+            <div class="container py-5">
+                <div class="row text-left">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="h1 mb-4">Carbon Design System </h2>
+                        <h6 class=""> <a href="https://carbondesignsystem.com/guidelines/motion/overview/#easing">Carbon in motion<i class="bi bi-box-arrow-up-right"></i></a></h6>
+                        <p class="mb-4 text-muted">Carbon defines their two two buckets of motion as productive and expressive motion, within which you have three variations of easing: standard easing, enterance easing, exit easing. </p>
 
 
-                    <p class="font-bold mb-4 ">Standard Easing <br><span class="text-muted">Used mainly when an element is visible from the beginning to the end of a motion.</span><br>
-                        <span class="code text-muted">Productive: cubic-bezier(1 , 0 , 1 , 1)</span> <a href="https://cubic-bezier.com/#1,0,1,1" class="bodylink">Link to view easing (set duration to 0.5s) <i class="bi bi-link-45deg"></i></a>
-                        <br>
-                        <span class="code text-muted">Expressive: cubic-bezier(0.4, 0.14, 0.3, 1) </span><a href="https://cubic-bezier.com/#.4,.14,.3,1" class="bodylink">Link to view easing (set duration to 0.5s) <i class="bi bi-link-45deg"></i></a>
-                    </p>
+                        <p class="mb-4 text-muted"><i>Expressive motion</i> is applied in the case of significant moments such as opening a new page, clicking the primary action button, or when the movement itself conveys a meaning. System alerts and notificaiton boxes coming into view are good spots to use expressive motion</p>
+                        <p class="mb-4 text-muted"><i>Productive motion</i> is generally used for microinteractions, it creates a sense of efficiency and responsiveness while remaining subtle.</p>
 
 
+                        <p class="font-bold mb-4 ">Standard Easing <br><span class="text-muted">Used mainly when an element is visible from the beginning to the end of a motion.</span><br>
+                            <span class="code text-muted">Productive: cubic-bezier(1 , 0 , 1 , 1)</span> <a href="https://cubic-bezier.com/#1,0,1,1" class="bodylink">Link to view easing (set duration to 0.5s) <i class="bi bi-link-45deg"></i></a>
+                            <br>
+                            <span class="code text-muted">Expressive: cubic-bezier(0.4, 0.14, 0.3, 1) </span><a href="https://cubic-bezier.com/#.4,.14,.3,1" class="bodylink">Link to view easing (set duration to 0.5s) <i class="bi bi-link-45deg"></i></a>
+                        </p>
 
 
 
-                    <!-- Scroll to top -->
-                    <a class="btn btn-outline-light px-4 rounded-0 scroll-top" href="#">Back to top</a>
+
+
+
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
     </section>
 
-
+    <!--Back to Top-->
+    <button onclick="topFunction()" id="myBtn" class="btn  btnblu" title="Go to top">Top</button>
 
 
 
@@ -291,9 +331,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+
+
+
     <script>
+        //        $('a').click(function() {
+        // var top = $('body').find($(this).attr('href')).offset().top - 150;
+        // $('html, body').animate({
+        // scrollTop: top
+        // }, 500, $.bez([1, 0, 1, 1]));
+        //
+        // return false;
+        // });
+
+
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
 
     </script>
+
 </body>
 
 </html>
