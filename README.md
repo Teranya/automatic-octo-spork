@@ -9,15 +9,17 @@ A personal reference of different ways design systems define motion and kinemati
 - [Material Design](https://m3.material.io/styles/motion/easing-and-duration/applying-easing-and-duration)
 
 
-# Design systems to be added:
+
+
+## Upcoming:
+- Cover M3
+- Include information on speed timings 
+- Wrap up more designs systems
+
+
+### Design systems to be added eventually:
 - [Audi](https://www.audi.com/ci/en/intro/basics/animation.html)
 - [FutureLearn](https://storybook.futurelearn.com/?path=/story/welcome--page)
 - [Acorn](https://acorn.firefox.com/latest/acorn.html)
 - [Brand Estonia](https://brand.estonia.ee/juhendid/videod-ja-animatsioonid/)
 - [Attlassian](https://atlassian.design/components/motion/variables/code)
-
-
-#To-do
-- Cover M3
-- Include information on speed timings 
-- Wrap up more designs systems
